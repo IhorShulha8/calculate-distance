@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>CalculateDistance</artifactId>
+    <artifactId>calculate-distance</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>CalculateDistance</name>
     <description>CalculateDistance</description>

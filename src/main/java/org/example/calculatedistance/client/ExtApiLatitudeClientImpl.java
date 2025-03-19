@@ -28,6 +28,9 @@ public class ExtApiLatitudeClientImpl implements ExtApiLatitudeClient {
                 .onStatus(HttpStatusCode::is4xxClientError, ((request, response) -> {
                     throw new IOException(String.format("Error thrown while external call. HttpStatus: '%d'", response.getStatusCode().value()));
                 }))
+                .onStatus(HttpStatusCode::is5xxServerError, ((request, response) -> {
+                    throw new IOException(String.format("Server error. HttpStatus: '%d'", response.getStatusCode().value()));
+                }))
                 .toEntity(CityData.class)
                 .getBody();
     }
