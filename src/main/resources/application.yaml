@@ -1,0 +1,4 @@
+
+api:
+  external:
+    url: https://api.zippopotam.us/us/{state}/{city}
